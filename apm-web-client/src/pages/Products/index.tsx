@@ -1,4 +1,3 @@
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -7,11 +6,9 @@ import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import Grid from '@mui/material/Grid';
 import StarIcon from '@mui/icons-material/StarBorder';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
-import { Link, useNavigate } from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 const tiers = [
     {
@@ -50,7 +47,7 @@ const tiers = [
     },
 ];
 
-export default function Products() {    
+export default function Products() {
     const navigate = useNavigate();
 
     const handleBuy = () => {
@@ -59,24 +56,7 @@ export default function Products() {
 
     return (
         <>
-            <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
-            <AppBar
-                position="static"
-                color="default"
-                elevation={0}
-                sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
-            >
-                <Toolbar sx={{ flexWrap: 'wrap' }}>
-                    <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-                        Company name
-                    </Typography>
-                    <Link to="/" >
-                        Login
-                    </Link>
-                </Toolbar>
-            </AppBar>
-            {/* Hero unit */}
-            <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
+            <Container disableGutters maxWidth="sm" component="main" sx={{pt: 8, pb: 6}}>
                 <Typography
                     component="h1"
                     variant="h2"
@@ -107,8 +87,8 @@ export default function Products() {
                                 <CardHeader
                                     title={tier.title}
                                     subheader={tier.subheader}
-                                    titleTypographyProps={{ align: 'center' }}
-                                    action={tier.title === 'Pro' ? <StarIcon /> : null}
+                                    titleTypographyProps={{align: 'center'}}
+                                    action={tier.title === 'Pro' ? <StarIcon/> : null}
                                     subheaderTypographyProps={{
                                         align: 'center',
                                     }}
@@ -154,7 +134,7 @@ export default function Products() {
                                         fullWidth
                                         variant={tier.buttonVariant as 'outlined' | 'contained'}
                                     >
-                                       Buy
+                                        Buy
                                     </Button>
                                 </CardActions>
                             </Card>

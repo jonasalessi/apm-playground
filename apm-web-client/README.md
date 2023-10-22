@@ -1,27 +1,28 @@
 # React + TypeScript + Vite
+This application is built using React, TypeScript, and Vite, and it incorporates Material UI templates for the purpose of having a few pages to simulate user interaction. The main purpose of this application is to utilize [APM](https://www.elastic.co/guide/en/apm/agent/rum-js/current/react-integration.html) as the agent to monitor its performance and user interactions.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+## Installation
+Install dependencies using yarn:
+```
+ yarn
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+or using npm:
+
+```
+npm install
+```
+
+## Running the application
+To run the application locally, use the following command:
+
+```
+ yarn dev
+```
+
+or using npm:
+
+```
+npm run dev
+```
+This will start the development server, and you can view the application in your browser at http://localhost:5173.
