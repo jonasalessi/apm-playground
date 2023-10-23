@@ -20,7 +20,7 @@ export default function Layout() {
                     <Typography variant="h6" color="inherit" noWrap sx={{flexGrow: 1, cursor: 'pointer'}} onClick={() => navigate('/products')}>
                         Company name
                     </Typography>
-                    <Button variant="outlined" onClick={() => navigate('/sign-in')}>
+                    <Button variant="outlined" onClick={() => navigate('/')}>
                         Login
                     </Button>
                 </Toolbar>

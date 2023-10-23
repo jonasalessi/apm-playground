@@ -1,4 +1,6 @@
 import {BrowserRouter, Route} from 'react-router-dom'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-ignore
 import { ApmRoutes } from '@elastic/apm-rum-react';
 import SignIn from './pages/SignIn'
 import Products from './pages/Products'
@@ -10,13 +12,13 @@ import Layout from "./components/Layout";
 
 export default function Routers() {
     return (
-        <BrowserRouter>
+        <BrowserRouter >
             <ApmRoutes>
                 <Route path="/" element={<Layout/>}>
-                <Route path="/sign-in" element={<SignIn/>}/>
+                <Route index element={<SignIn/>}/>
                 <Route path="/products" element={<Products/>}/>
-                <Route element={<Checkout/>}>
-                    <Route path="/checkout" element={<AddressForm/>}/>
+                <Route path="/checkout" element={<Checkout/>}>
+                    <Route index element={<AddressForm/>}/>
                     <Route path="/checkout/payment" element={<PaymentForm/>}/>
                     <Route path="/checkout/review" element={<Review/>}/>
                 </Route>

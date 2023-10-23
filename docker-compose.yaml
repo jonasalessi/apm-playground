@@ -1,5 +1,12 @@
 version: '2.2'
 services:
+
+  app:
+    build:
+      context: apm-web-client
+    ports:
+      - "3000:3000"
+
   apm-server:
     image: docker.elastic.co/apm/apm-server:7.17.6
     depends_on:
